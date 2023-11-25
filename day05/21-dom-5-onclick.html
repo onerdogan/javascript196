@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-5</title>
+
+    <style>
+        #name{
+            background-color: aqua;
+            border-radius: 15px;
+            color: red;
+        }
+        .btn{
+            background-color: magenta;
+            border-radius: 15px;
+            color: greenyellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="name" value="">
+    <button type="button" class="btn" onclick="sayHallo()">Merhaba</button>
+
+    <script>
+        function sayHallo(){
+            const txtName=document.querySelector("#name").value 
+            const selam=` selam ${txtName} doğan`
+            console.log(selam)
+
+            alert(selam)
+        }
+
+    </script>
+</body>
+</html>

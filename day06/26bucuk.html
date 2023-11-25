@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <Style>
+.toggle-btn{
+    background-color: darkblue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.koyuMode{
+    background-color: darkgreen;
+    color: white;
+}
+.koyu .toggle-btn{
+    background-color: white;
+    color: darkgreen;
+}
+
+    </Style>
+</head>
+<body>
+    
+    <h1>İstiklal Marşı</h1>
+    <div class="toggle-btn" onclick="modeDegistir()" >
+        <i class="fa-solid fa-star"></i>
+        <!-- <i class="fa-regular fa-sun"></i> -->
+    </div>
+<p>
+    İSTİKLAL MARŞI
+
+
+                Kahraman Ordumuza
+
+
+Korkma! Sönmez bu şafaklarda yüzen al sancak,
+Sönmeden yurdumun üstünde tüten en son ocak.
+O benim milletimin yıldızıdır, parlayacak;
+O benimdir, o benim milletimindir ancak.
+
+Çatma, kurban olayım, çehreni ey nazlı hilal!
+Kahraman ırkıma bir gül; ne bu şiddet, bu celal?
+Sana olmaz dökülen kanlarımız sonra helal…
+Hakkıdır, Hakk'a tapan milletimin istiklal.
+
+Ben ezelden beridir hür yaşadım, hür yaşarım,
+Hangi çılgın bana zincir vuracakmış? Şaşarım.
+Kükremiş sel gibiyim, bendimi çiğner, aşarım,
+Yırtarım dağları, enginlere sığmam, taşarım.
+
+Garbın afakını sarmışsa çelik zırhlı duvar,
+Benim iman dolu göğsüm gibi serhaddim var.
+Ulusun, korkma! Nasıl böyle bir imanı boğar,
+ Medeniyet dediğin tek dişi kalmış canavar?
+
+Arkadaş! Yurduma alçakları uğratma sakın,
+Siper et gövdeni, dursun bu hayâsızca akın.
+Doğacaktır sana vadettiği günler Hakk'ın,
+Kim bilir, belki yarın belki yarından da yakın.
+
+Bastığın yerleri toprak diyerek geçme, tanı,
+Düşün altındaki binlerce kefensiz yatanı.
+Sen şehit oğlusun, incitme, yazıktır atanı,
+Verme, dünyaları alsan da bu cennet vatanı.
+
+Kim bu cennet vatanın uğruna olmaz ki feda?
+Şüheda fışkıracak, toprağı sıksan şüheda.
+Canı, cananı, bütün varımı alsın da Hüda,
+Etmesin tek vatanımdan beni dünyada cüda.
+
+Ruhumun senden İlahî, şudur ancak emeli:
+Değmesin mabedimin göğsüne namahrem eli.
+Bu ezanlar, ki şehadetleri dinin temeli,
+Ebedî, yurdumun üstünde benim inlemeli.
+
+O zaman vecdile bin secde eder, varsa taşım,
+Her cerihamdan, İlahî, boşanıp kanlı yaşım,
+Fışkırır ruhumücerret gibi yerden naaşım,
+O zaman yükselerek arşa değer belki başım.
+
+Dalgalan sen de şafaklar gibi ey şanlı hilal!
+Olsun artık dökülen kanlarımın hepsi helal.
+Ebediyen sana yok, ırkıma yok izmihlal.
+Hakkıdır, hür yaşamış bayrağımın hürriyet;
+Hakkıdır, Hakk'a tapan milletimin istiklal.                     
+
+                                                                         Mehmet Akif Ersoy
+</p>
+    <script>
+        function modeDegistir(){
+
+let body =document.querySelector("body")
+let buttonToggle=document.querySelector(".toggle-btn")
+let isDark=body.classList.contains("koyuMode")
+
+if(isDark){
+    body.classList.remove("koyuMode")
+    buttonToggle.innerHTML=`<i class="fa-solid fa-star"></i>`
+}else{
+    body.classList.add("koyuMode")
+    buttonToggle.innerHTML=`<i class="fa-solid fa-sun"></i>`
+}
+
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    margin: 10;
+    padding: 10;
+}
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    color: antiquewhite;
+    letter-spacing: 1rem;
+
+}
+h1{
+    opacity:unset;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        .classListStyle{
+          color: darkblue;
+          font-size: xx-large;
+  
+        }
+  
+      </style>
+</head>
+<body>
+    
+    <input type="number" id="inp" placeholder="Urun tutarini giriniz" />
+    <button type="button" onclick="hesapla()">Hesapla</button>
+    <p id="sonuc"></p>
+    <script>
+        function hesapla(){
+        let inputEl=document.querySelector("#inp")
+        let inputValue=(inputEl.value)
+        console.log(inputValue)
+        
+        
+        switch(true){
+            case (inputValue>1500):
+             inputValue*=0.85;
+          
+            break;
+            
+            case (inputValue>700):
+            inputValue*=0.9;
+            break;
+            
+            case (inputValue>500) :
+            inputValue*=0.93;
+            break;
+            
+          case (inputValue>300):
+          inputValue*=0.95;
+          break;
+          
+          case ( inputValue<301):
+         inputValue*=0.98;
+            break;
+            
+            default:console.log("sorry")
+        }
+       document.querySelector("#sonuc").innerText=`Toplam odemeniz gereken miktar ${inputValue.toFixed(2)} TL'dir `
+         const paragraf=document.getElementById("sonuc");
+         paragraf.classList.add("classListStyle");
+         inputEl.value=""
+    }
+
+    </script>
+</body>
+</html>

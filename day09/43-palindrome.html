@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+    <script>
+        let palindrome="";
+     //   console.log(palindrome.length)
+       // console.log(palindrome.charAt(palindrome.length-2))
+       function isPlandrome(palindrome){ 
+        let reverseStr="";
+        for(let i=palindrome.length-1; i>=0; i-- ){
+    reverseStr+=palindrome.charAt(i)
+        }
+        console.log(reverseStr)
+    }
+    isPlandrome("ey edip adanada pide ye")
+
+
+
+   let sayi = parseInt(prompt("Bir sayı giriniz: "));
+   
+    let sayiStr ="";
+     let sayiTers="";
+    sayiStr = sayi.toString();
+    console.log(sayiStr.length)
+   console.log(sayiStr)
+    
+
+
+    
+    const tersleme=(sayiStr)=>{
+       
+    for(let i=sayiStr.length-1; i>=0; i-- ){
+    sayiTers+=sayiStr.charAt(i)
+        }
+        console.log(sayiTers)
+    }
+
+    tersleme(sayiStr)
+
+        
+   
+if (sayiStr==sayiTers) {
+  console.log(`${sayi} bir palindrom sayıdır.`);
+} else {
+  console.log(`${sayi} bir palindrom sayı değildir.`);
+}
+       
+    </script>
+    
+</body>
+</html>  

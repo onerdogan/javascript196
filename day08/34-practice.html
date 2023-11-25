@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <h2 id="result"></h2>
+    <script>
+       function alanHesapla(a,b){
+        let alan=(a ?? 0)*(b ?? 1)
+        document.querySelector("#result").innerHTML=alan
+       return alan;
+        }
+alanHesapla(5)  
+ console.log(alanHesapla(12,4))
+ 
+     /*  function topla(a,b) {
+       return a+b;
+      }
+      console.log(topla(7,155))
+      console.log(topla(9,12)) */
+    </script>
+  </body>
+</html>
+
+
+<!-- JavaScriptde nullish coalescing operatörü (??), bir ifadenin sol tarafındaki değer null veya undefined ise sağ tarafındaki değeri döndüren bir mantıksal operatördür. Bu operatör, sadece null veya undefined durumlarında sağ taraftaki değeri kullanırken, diğer durumlarda sol taraftaki değeri döndürür.
+
+Örneğin, aşağıdaki kodda nullish coalescing operatörü kullanılmıştır:
+
+JavaScript
+Yapay zeka tarafından oluşturulan kod. Dikkatle gözden geçirin ve kullanın. SSS hakkında daha fazla bilgi.
+
+const nullValue = null;
+const emptyText = "";
+const someNumber = 42;
+
+const valA = nullValue ?? "default for A";
+const valB = emptyText ?? "default for B";
+const valC = someNumber ?? 0;
+
+console.log(valA); // "default for A"
+console.log(valB); // "" (çünkü boş dize null veya undefined değildir)
+console.log(valC); // 42
+Bu örnekte, valA değişkeni null olduğu için sağ taraftaki "default for A" değeri kullanılmıştır. valB değişkeni boş bir dize olduğu için sağ taraftaki "default for B" değeri kullanılmıştır. valC değişkeni ise null veya undefined olmadığı için sol taraftaki değeri olan 42yi korumuştur.
+
+Nullish coalescing operatörü, özellikle değişkenlere varsayılan değer atamak veya nesne özelliklerine güvenli bir şekilde erişmek için kullanışlıdır -->

@@ -1,0 +1,18 @@
+.frmBmi{
+    display: flex;
+    gap:25px;
+}
+.frmBmi .form-group{
+    border:1px solid rgb(159, 159, 159);
+    padding: 5px 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.frmBmi input:focus,
+.frmBmi input{
+    border:0;
+    outline:0;
+}

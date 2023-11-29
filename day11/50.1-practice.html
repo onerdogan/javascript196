@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="./css/50-style.css">
+</head>
+<body>
+    <div class="card">
+        <input type="number" placeholder="SAYI GİR" id="txtNumber"  >
+        <button class="tahmin">Tahmin Et</button>
+        <button class="basla">Oyunu Baslat</button>
+        <br>
+        <label id="label"></label>
+    </div>
+    <!-- <button id="myBtn">Try it</button>
+
+<script>
+let try=document.getElementById("myBtn");
+try.addEventListener("click", ()=> {
+  alert("Hello World!");
+});
+</script> -->
+    <script>
+
+
+let tahminButton=document.querySelector(".tahmin");
+
+let baslabutton=document.querySelector(".basla");
+
+
+let inputEl=document.querySelector("#txtNumber");
+let sonucEl=document.querySelector("#label");
+let randomNumber;
+const randomNumberOlustur = (max,min) =>
+Math.floor(Math.random()*(max-min+1)+min);
+
+
+//console.log(randomNumberOlustur(300,5))
+baslabutton.addEventListener("click", () => {
+    randomNumber=randomNumberOlustur(100,1);
+    tahminButton.style.display="inline"
+    baslabutton.style.display="none"
+    inputEl.focus()
+})
+tahminButton.addEventListener("click", ()=> {
+    let number=Number(inputEl.value); 
+    number ??=0
+    if(number<1 || number>100){
+        sonucEl.innerHTML=`1 ile 100 arasında bir sayi giriniz`
+        return;
+    }
+    if(number>randomNumber){
+        sonucEl.innerHTML=` DAHA KÜÇÜK BİR SAYI`
+    }else if(number<randomNumber){
+        sonucEl.innerHTML=` DAHA BÜYÜK BİR SAYI`
+    }else{
+        sonucEl.innerHTML=` TEBRİKLER BİLDİNİZ`
+        tahminButton.style.display="none"
+        baslabutton.style.display="inline"
+    }
+inputEl.value=""
+inputEl.focus()
+})
+    </script>
+</body>
+</html>

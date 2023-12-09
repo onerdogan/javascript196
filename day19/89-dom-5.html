@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model-5</title>
+</head>
+<body>
+     <input type="text" id="inputEl">
+     <button id="btnId">Ekle</button>
+     <ul id="txtOutput">
+     </ul>
+<script>
+
+document.getElementById("btnId").addEventListener("click",()=>{
+
+    let inputEl=document.getElementById("inputEl");
+    let outputEl=document.getElementById("txtOutput");
+    let inputValue=inputEl.value 
+   // console.log(nameEl)
+    let newLi=document.createElement("li");
+    //console.log(newLi)
+    newLi.innerText=inputValue
+    newLi.style.color="blue"
+    newLi.setAttribute("data-id",Math.floor(Math.random()*1000))
+
+    outputEl.appendChild(newLi)
+    inputEl.value="";
+    inputEl.focus();
+
+})
+
+
+</script>
+    
+</body>
+</html>

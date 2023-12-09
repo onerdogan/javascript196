@@ -10,6 +10,8 @@ pointEl.forEach((point,index)=>{
     if(pointText<50){
         document.querySelector(`#tblStudents tbody tr:nth-child(${index+1})`).
         classList.add("table-danger")
+
+        //point.closest("tr").classList.add("table-danger")
     }
 })
 

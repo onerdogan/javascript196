@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <button id="btnClick">Click</button>
+    <script>
+const soz1 = () => {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						resolve("1.Söz");
+					}, 1500);
+				});
+			};
+
+            const soz2 = () => {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						resolve("2.Söz");
+					}, 2500);
+				});
+            };
+                
+            const soz3 = () => {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						resolve("3.Söz");
+					}, 500);
+				});
+			};
+            const soz4 = () => {
+				return new Promise((resolve) => {
+					setTimeout(() => {
+						resolve("4.Söz");
+					}, 900);
+				});
+			};
+
+            //hangisi hızlı cevap verririse önce o gelir
+            soz1().then((soz)=>console.log(soz));
+            soz2().then((soz)=>console.log(soz));
+            soz3().then((soz)=>console.log(soz));
+            soz4().then((soz)=>console.log(soz));
+          
+            //aşağıdaki gibi asenkron promise zincirii oluşur
+
+            soz1()
+            .then((soz)=>{
+                console.log("=>",soz)
+                return soz2();
+            })
+            .then((soz)=>{
+                console.log("=>",soz)
+                return soz3();
+            })
+            .then((soz)=>{
+                console.log("=>",soz)
+                return soz4();
+            })
+            .then((soz)=>{
+                console.log("=>",soz)
+               
+            })
+
+
+            //asenkron yapıları senkron çalıştıran await yapısının kullanılması
+
+     document.getElementById("btnClick").addEventListener("click", async()=>{
+            const veri1=await soz1();
+            console.log(veri1);
+            const veri2=await soz2();
+            console.log(veri2);
+            const veri3=await soz3();
+            console.log(veri3);
+            const veri4=await soz4();
+            console.log(veri4);
+            })
+			
+
+    </script>
+</body>
+</html>

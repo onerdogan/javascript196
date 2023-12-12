@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back</title>
+</head>
+<body>
+
+    <h2 id="adım1"></h2>
+    <h2 id="adım2"></h2>
+    <h2 id="adim3"></h2>
+    <h2 id="adim4"></h2>
+    <h2 id="adim5"></h2>
+    <h2 id="adım6"></h2>
+    
+    <script>
+        const adım1=document.getElementById("adım1");
+        const adım2=document.getElementById("adım2");
+        const adim3=document.getElementById("adim3");
+        const adim4=document.getElementById("adim4");
+        const adim5=document.getElementById("adim5");
+        const adım6=document.getElementById("adım6");
+
+
+        const siparisVerdik=(talep, cb)=>{
+            adim4.innerHTML=`${talep} hazırlanıyor...`
+            setTimeout(()=>{
+           // adım4.innerHTML=`${talep} hazır`
+            const siparis=talep;
+                cb(siparis)
+            },3000);
+
+
+
+        }
+            adım1.innerHTML="avm ye gittik"
+            adım2.innerHTML= "bowling oynadık"
+
+            adim3.innerHTML= "karnımız acıktı"
+
+        siparisVerdik("lahmacun", (siparis)=>{
+            adım6.innerHTML=`${siparis} teslim alındı`
+
+
+        });
+
+        adim5.innerHTML="ayakkabı bakmaya git"
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest operator</title>
+</head>
+<body>
+    <script>
+const getAverage = (firstName, lastName, ...scores) => {
+const total=scores.reduce((t,x)=>t+x,0);
+const lenght=scores.length;
+const average=total/lenght;
+console.log(average)
+return `The average of scores of ${firstName} ${lastName} is ${average}`;
+
+};
+const result=getAverage("ali","gel", 93, 87, 76, 54, 88);
+console.log(result)
+
+
+    </script>
+    
+</body>
+</html>

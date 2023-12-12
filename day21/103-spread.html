@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+    </head>
+    <body>
+        <script>
+            
+            let cities = ["Brussel", "London", "Bursa", "Helsinki", "Istanbul", "Koln"];
+            cities = ["Zurich", "Marsilia", ...cities, "Bursa", "Roma"];
+            
+            console.log(cities);
+
+
+            // Dublicate dataları unique hale getirmek için
+            const newCities = [...new Set(cities)];
+            console.log(newCities);
+            
+            const person={
+                firstname:"ali",
+                lastName:"gel",
+                country:"germany",
+                departmen:"IT"
+            };
+
+            // Javascript te object ve array ler referans tipinde oldukları için, içlerinde değer değil referans saklarlar. Farklı değişkenlere assign edildiklerinde değerleri değil, referansları aktarılır. Bu sebeple yine aynı değere referans olurlar.
+            const person2=person;
+            person2.firstname="veli"
+
+            console.log(person)
+            console.log(person2)
+
+            const person3={...person};//shallow copy
+            person3.firstname="zeki";
+
+            const person4={...person, email:"asd@gmail"};
+            console.log(person3);
+            console.log(person4)
+        </script>
+    </body>
+</html>

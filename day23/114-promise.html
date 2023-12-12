@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise chain</title>
+</head>
+<body>
+<button id="btnSip">Click me</button>
+    <script>
+
+        const siparisVer = (talep) => {
+            return new Promise((resolve)=>{
+                console.log(`${talep} siparişi alındı`);
+                setTimeout(()=>{
+                    const siparis = talep;
+						console.log(`${siparis} hazır`);
+						resolve(siparis);
+                },3000)
+            })
+        }
+
+        const yemekYe = (siparis) => {
+            return new Promise((resolve)=>{
+                console.log(`${siparis} yemek alındı`);
+                setTimeout(()=>{
+                    
+						console.log(`${siparis} bitti`);
+						resolve();
+                },2000)
+            })
+        };
+
+        const filmIzle = () => {
+            return new Promise((resolve)=>{
+                console.log(`film izlemeye başladık`);
+                setTimeout(()=>{
+                    
+						console.log(`film bitti`);
+						resolve();
+                },3500)
+            })
+        };
+
+        const patlamisMisirYe = () => {
+            return new Promise((resolve)=>{
+                console.log(`patlamış Mısır hazır`);
+                setTimeout(()=>{
+                    
+						console.log(`patlamış mısır bitti`);
+						resolve();
+                },3000)
+            })
+        };
+
+        document.getElementById("btnSip").addEventListener("click",()=>{
+            siparisVer("pizza")
+            .then((siparis)=> yemekYe(siparis))
+            .then(()=>{
+                filmIzle();
+            patlamisMisirYe();
+            });
+        });
+    </script>
+    
+</body>
+</html>
